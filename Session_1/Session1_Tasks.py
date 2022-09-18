@@ -39,11 +39,11 @@ def concatImages(img1,img2,img3,img4):
   displayImage(concat)
   
 # Uncomment and run
-image1 = cv2.imread("./Images/art1.jpeg", 0)
-image2 = cv2.imread("./Images/art2.jpeg", 0)
-image3 = cv2.imread("./Images/art3.jpeg", 0)
-image4 = cv2.imread("./Images/art4.jpeg", 0)
-concatImages(image1, image2, image3, image4)
+# image1 = cv2.imread("./Images/art1.jpeg", 0)
+# image2 = cv2.imread("./Images/art2.jpeg", 0)
+# image3 = cv2.imread("./Images/art3.jpeg", 0)
+# image4 = cv2.imread("./Images/art4.jpeg", 0)
+# concatImages(image1, image2, image3, image4)
 #---------------------------------------#
 
 
@@ -65,7 +65,7 @@ def FeatureMatchORB(img1,img2):
     matches = sorted(matches, key = lambda x:x.distance)
     
     # Displaying 30 matches
-    img3 = cv2.drawMatches(image1,kp1,image2,kp2,matches[:30],None,flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
+    img3 = cv2.drawMatches(img1,kp1,img2,kp2,matches[:30],None,flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
     displayImage(img3)
 
 
@@ -91,10 +91,10 @@ def FeatureMatchSIFT(img1, img2):
     displayImage(img3)
 
 # Uncomment and run
-# image1 = cv2.imread("./Images/feature2.jpg", 0)
-# image2 = cv2.imread("./Images/feature4.jpg", 0)
-# FeatureMatchORB(image1,image2)
-# FeatureMatchSIFT(image1,image2)
+image1 = cv2.imread("./Images/feature2.jpg", 0)
+image2 = cv2.imread("./Images/feature4.jpg", 0)
+FeatureMatchORB(image1,image2)
+FeatureMatchSIFT(image1,image2)
 
 
 # Questions
