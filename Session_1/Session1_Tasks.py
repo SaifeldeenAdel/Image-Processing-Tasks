@@ -16,7 +16,6 @@ def display2Images(img1,img2):
 
 #---------------------------------------#
 # Task 1 - Pick any 4 images of your own choice, merge them into 1 image containing the 4 images as 2X2 figure.
-#---------------------------------------#
 
 # Takes in ANY 4 images of any dimensions 
 def concatImages(img1,img2,img3,img4):
@@ -45,6 +44,7 @@ image2 = cv2.imread("./Images/art2.jpeg", 0)
 image3 = cv2.imread("./Images/art3.jpeg", 0)
 image4 = cv2.imread("./Images/art4.jpeg", 0)
 concatImages(image1, image2, image3, image4)
+#---------------------------------------#
 
 
 
