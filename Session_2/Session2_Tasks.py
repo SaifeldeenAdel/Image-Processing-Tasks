@@ -13,9 +13,9 @@ def colorToGrey(img):
 
 
 # UNCOMMENT BELOW TO RUN TASK 1
-image = cv2.imread('./Images/art2.jpeg')
-colorToGrey(image)
-cv2.waitKey(0)
+# image = cv2.imread('./Images/art2.jpeg')
+# colorToGrey(image)
+# cv2.waitKey(0)
 
 #-----------
 
