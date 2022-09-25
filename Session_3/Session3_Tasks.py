@@ -1,6 +1,10 @@
 import cv2
 import numpy as np
 
+point1 = None
+point2 = None
+cropped = None
+
 font = cv2.FONT_HERSHEY_SIMPLEX
 org = (100, 50)
 fontScale = 0.9
@@ -11,10 +15,6 @@ thickness = 2
 def putText(img, text):
     img = cv2.putText(img, text, org, font, fontScale, color, thickness, cv2.LINE_AA)
     return img
-
-point1 = None
-point2 = None
-cropped = None
 
 
 # Function for extracting the color yellow from the image and checking how many pixels of yellow there are and deciding if its enough
@@ -69,7 +69,7 @@ cv2.namedWindow('Image')
 cv2.setMouseCallback("Image", crop)
 
 
-
+# CHANGE IMAGE HERE
 image = cv2.imread('./Test_Images/test3.png')
 
 try:
@@ -121,4 +121,5 @@ try:
         break 
 except Exception as e:
   print(e)
+
 cv2.destroyAllWindows()
